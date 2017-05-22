@@ -1,19 +1,26 @@
 <h1>Calculators#index</h1>
-<p>Find me in app/views/calculators/index.html.erb</p>
-<div style="overflow:hidden;">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-8">
-                <div id="datetimepicker12"></div>
+<p>Kiedy aktywowano LTE w panelu play24?</p>
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+
+                <%= form_tag(calculate_path) do %>
+                
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="datetime" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <% end %>
             </div>
         </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker12').datetimepicker({
-                inline: true,
-                sideBySide: true
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
             });
-        });
-    </script>
+        </script>
+    </div>
 </div>
